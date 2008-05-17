@@ -1,5 +1,5 @@
 #
-Summary:	Image editor and processor
+Summary:	System resources monitor
 Name:		watsup
 Version:	09
 Release:	1
@@ -14,6 +14,20 @@ BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Watsup monitors Linux system resources and the processes using those
+resources. It is different from monitor programs you have seen before:
+
+- Overhead is low, supporting a sample interval down to 0.1 seconds
+- Overall system and top process resources are shown on one page
+- CPU, memory, disk I/O, network I/O, and page faults are monitored
+- The highest ranked processes fitting in the window are shown, with
+  minimal jumping around between samples (easier to watch one or a few
+  processes)
+- Process rank is a weighted sum of CPU, hard page faults, and disk
+  I/O over the last several samples (the weight of each sample declines
+  with age)
+- Font can be made large or small (for display in a corner of the
+  screen)
 
 %prep
 %setup -q -n %{name}
